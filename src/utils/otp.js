@@ -13,9 +13,6 @@ export const generateRandomOTP = () => {
 };
 
 export const autoCleanExperiedOtps = async () => {
-  // this script will remove all the outdated otps
-  console.log("cleaning otps");
-
   setTimeout(async () => {
     await Otp.deleteMany({
       expriryAt: {
